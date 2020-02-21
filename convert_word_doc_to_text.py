@@ -16,6 +16,7 @@ for process_file in  os.listdir(source_directory):
     
     #extract text from the file
     content = textract.process(os.path.join(source_directory, process_file))
+    print(content)
     
     # We create and open the new and we prepare to write the Binary Data which is represented by the wb - Write Binary
     write_text_file = open(os.path.join(training_directory, dest_file_path), "wb")
